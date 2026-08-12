@@ -1,0 +1,84 @@
+generated: '2026-08-12'
+method: probed
+source: live GET probes of /.well-known/* on every Evertas host
+note: >-
+  Every probed path returned 404. Evertas serves no /.well-known discovery surface on
+  any host, so NO WellKnown or SecurityTxt pointer is emitted in apis.yml — this file
+  records a verified absence, not a presence. Both hosts front a Hugo static marketing
+  site behind Cloudflare; the 404 bodies are the site's own 404 template (evertas.com)
+  and a bare Cloudflare/origin 404 (portal.evertas.com), not SPA catch-alls returning
+  200.
+hosts:
+- host: https://evertas.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://portal.evertas.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+x-contract-discovery:
+  checked: '2026-08-12'
+  result: no-machine-readable-contract-found
+  hosts_resolved:
+  - evertas.com
+  - www.evertas.com
+  - portal.evertas.com
+  hosts_not_resolving:
+  - api.evertas.com
+  - docs.evertas.com
+  - developer.evertas.com
+  - developers.evertas.com
+  - app.evertas.com
+  - status.evertas.com
+  - trust.evertas.com
+  - mcp.evertas.com
+  probes:
+  - url: https://evertas.com/openapi.json
+    status: 404
+  - url: https://evertas.com/swagger.json
+    status: 404
+  - url: https://evertas.com/api-docs
+    status: 404
+  - url: https://evertas.com/docs
+    status: 404
+  - url: https://evertas.com/llms.txt
+    status: 404
+  - url: https://evertas.com/robots.txt
+    status: 200
+    note: 'User-agent: * / Disallow: (nothing disallowed); sitemap declared'
+  - url: https://evertas.com/sitemap.xml
+    status: 200
+    note: 117 URLs enumerated; no developer, API, docs, or reference page among them
+  graphql: not-present
+  mcp: not-present
+  a2a: not-present
+  grpc: not-present
