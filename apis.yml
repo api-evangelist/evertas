@@ -12,6 +12,17 @@ description: 'Evertas is a digital-asset insurance underwriter and the first com
   broker document-upload portal; it publishes no public API, developer portal, SDK,
   or machine-readable specification.'
 url: https://raw.githubusercontent.com/api-evangelist/evertas/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://evertas.com/img/evertas-logo.svg
 x-type: company
 x-source: harvest:secondary-market
