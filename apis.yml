@@ -50,7 +50,7 @@ tags:
 - Digital Assets
 - Risk Management
 - Underwriting
-- Financial-Services
+- Financial Services
 - Blockchain
 tags_raw:
 - Company
@@ -61,6 +61,7 @@ tags_raw:
 - Underwriting
 - Financial Services
 - Blockchain
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
